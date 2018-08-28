@@ -1,5 +1,5 @@
 PROJECT := $(shell basename $(shell pwd))
-PYTHON_FILES := steem steembase tests setup.py
+PYTHON_FILES := smoke smokebase tests setup.py
 
 .PHONY: clean test fmt install
 

@@ -1,4 +1,4 @@
-Steem - Your Starting Point
+Your Starting Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Quick Start
@@ -8,32 +8,32 @@ You can start using the library with just a few lines of code, as seen in this q
 .. code-block:: python
 
    # first, we initialize Steem class
-   from steem import Steem
+   from smoke import Steem
    s = Steem()
 
 .. code-block:: python
 
    # check @ned's balance
-   >>> s.get_account('ned')['sbd_balance']
-   '980.211 SBD'
+   >>> s.get_account('stoner')['balance']
+   '420.011 SMOKE'
 
-   # lets send $1.0 SBD to @ned
-   >>> s.commit.transfer(to='ned', amount=1, asset='SBD', account='furion')
+   # lets send 1.0 SMOKE to @baabeetaa
+   >>> s.commit.transfer(to='baabeetaa', amount=1, asset='SMOKE', account='stoner')
    {'expiration': '2017-03-12T17:54:43',
     'extensions': [],
     'operations': [['transfer',
-      {'amount': '1.000 SBD', 'from': 'furion', 'memo': '', 'to': 'ned'}]],
+      {'amount': '1.000 SMOKE', 'from': 'stoner', 'memo': '', 'to': 'baabeetaa'}]],
     'ref_block_num': 23008,
     'ref_block_prefix': 961695589,
     'signatures': ['1f1322be9ca0c22b27c0385c929c9863901ac78cdaedea2162024ea040e22c4f8b542c02d96cbc761cbe4a188a932bc715bb7bcaf823b6739a44bb29fa85f96d2f']}
 
    # yup, its there
-   >>> s.get_account('ned')['sbd_balance']
-   '981.211 SBD'
+   >>> s.get_account('stoner')['balance']
+   '421.011 SMOKE'
 
-Importing your Steem Account
+Importing your Account
 ============================
-`steem-python` comes with a BIP38 encrypted wallet, which holds your private keys.
+`smoke-python` comes with a BIP38 encrypted wallet, which holds your private keys.
 
 
 
@@ -41,7 +41,7 @@ Alternatively, you can also pass required WIF's to ``Steem()`` initializer.
 
 ::
 
-    from steem import Steem
+    from smoke import Steem
     s = Steem(keys=['<private_posting_key>', '<private_active_key>'])
 
 Using the encrypted wallet is however a recommended way.
@@ -168,8 +168,8 @@ Post, etc) will use this as their default instance.
 
     ::
 
-        from steem.steemd import Steemd
-        from steem.instance import set_shared_steemd_instance
+        from smoke.steemd import Steemd
+        from smoke.instance import set_shared_steemd_instance
 
         steemd_nodes = [
             'https://gtg.steem.house:8090',
@@ -186,9 +186,9 @@ This is useful when you want to contain a modified ``steemd`` instance to an exp
 
     ::
 
-        from steem.steemd import Steemd
-        from steem.account import Account
-        from steem.Blockchain import Blockchain
+        from smoke.steemd import Steemd
+        from smoke.account import Account
+        from smoke.Blockchain import Blockchain
 
         steemd_nodes = [
             'https://gtg.steem.house:8090',

@@ -24,11 +24,11 @@ To bypass password entry, you can set an environmnet variable ``UNLOCK``.
 
 ::
 
-    UNLOCK=mysecretpassword steempy transfer 100 STEEM <recipient>
+    UNLOCK=mysecretpassword steempy transfer 100 SMOKE <recipient>
 
 Common Commands
 ---------------
-First, you may like to import your Steem account:
+First, you may like to import your SMOKE account:
 
 ::
 
@@ -57,7 +57,7 @@ Sending funds:
 
 ::
 
-   steempy transfer --account <account_name> 100 STEEM <recipient_name> memo
+   steempy transfer --account <account_name> 100 SMOKE <recipient_name> memo
 
 Upvoting a post:
 
@@ -88,7 +88,7 @@ If you've set up your `default_account`, you can now send funds by omitting this
 
 ::
 
-    steempy transfer 100 STEEM <recipient_name> memo
+    steempy transfer 100 SMOKE <recipient_name> memo
 
 
 Help
@@ -100,17 +100,17 @@ You can see all available commands with ``steempy -h``
     ~ % steempy -h
     usage: steempy [-h] [--node NODE] [--no-broadcast] [--no-wallet] [--unsigned]
                    [--expires EXPIRES] [--verbose VERBOSE] [--version]
-                   {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
+                   {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,balance,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                    ...
 
     Command line tool to interact with the Steem network
 
     positional arguments:
-      {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
+      {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,balance,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                             sub-command help
         set                 Set configuration
         config              Show local configuration
-        info                Show basic STEEM blockchain info
+        info                Show basic SMOKE blockchain info
         changewalletpassphrase
                             Change wallet password
         addkey              Add a new key to the wallet
@@ -120,11 +120,10 @@ You can see all available commands with ``steempy -h``
         listaccounts        List available accounts in your wallet
         upvote              Upvote a post
         downvote            Downvote a post
-        transfer            Transfer STEEM
-        powerup             Power up (vest STEEM as STEEM POWER)
-        powerdown           Power down (start withdrawing STEEM from steem POWER)
+        transfer            Transfer SMOKE
+        powerup             Power up (vest SMOKE as SMOKE POWER)
+        powerdown           Power down (start withdrawing SMOKE from SMOKE POWER)
         powerdownroute      Setup a powerdown route
-        convert             Convert STEEMDollars to Steem (takes a week to settle)
         balance             Show the balance of one more more accounts
         interest            Get information about interest payment
         permissions         Show permissions of an account
@@ -139,10 +138,7 @@ You can see all available commands with ``steempy -h``
         sign                Sign a provided transaction with available and
                             required keys
         broadcast           broadcast a signed transaction
-        orderbook           Obtain orderbook of the internal market
-        buy                 Buy STEEM or SBD from the internal market
-        sell                Sell STEEM or SBD from the internal market
-        cancel              Cancel order in the internal market
+
         resteem             Resteem an existing post
         follow              Follow another account
         unfollow            unfollow another account
@@ -163,4 +159,3 @@ You can see all available commands with ``steempy -h``
       --verbose VERBOSE, -v VERBOSE
                             Verbosity
       --version             show program's version number and exit
-

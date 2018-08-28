@@ -4,16 +4,16 @@ Examples
 Syncing Blockchain to a Flat File
 =================================
 
-Here is a relatively simple script built on top of ``steem-python`` that will let you sync
-STEEM blockchain into a simple file.
+Here is a relatively simple script built on top of ``smoke-python`` that will let you sync
+SMOKE blockchain into a simple file.
 You can run this script as many times as you like, and it will continue from the last block it synced.
 
     ::
 
         import json
         import os
-        
-        from steem.blockchain import Blockchain
+
+        from smoke.blockchain import Blockchain
 
 
         def get_last_line(filename):
@@ -80,14 +80,14 @@ Witness Killswitch
 ==================
 
 Occasionally things go wrong: software crashes, servers go down...
-One of the main roles for STEEM witnesses is to reliably mint blocks.
+One of the main roles for SMOKE witnesses is to reliably mint blocks.
 This script acts as a kill-switch to protect the network from missed blocks and
 prevents embarrassment when things go totally wrong.
 
     ::
 
         import time
-        from steem import Steem
+        from smoke import Steem
 
         steem = Steem()
 
@@ -96,9 +96,8 @@ prevents embarrassment when things go totally wrong.
         witness_name = 'furion'
         witness_url = "https://steemit.com/steemit/@furion/power-down-no-more"
         witness_props = {
-            "account_creation_fee": "0.500 STEEM",
+            "account_creation_fee": "0.500 SMOKE",
             "maximum_block_size": 65536,
-            "sbd_interest_rate": 15,
         }
 
 
@@ -131,27 +130,27 @@ This script will also teach us how to create and sign transactions ourselves.
 
     ::
 
-        from steem.transactionbuilder import TransactionBuilder
-        from steembase import operations
+        from smoke.transactionbuilder import TransactionBuilder
+        from smokebase import operations
 
         # lets create 3 transfers, to 3 different people
         transfers = [
             {
                 'from': 'richguy',
                 'to': 'recipient1',
-                'amount': '0.001 STEEM',
+                'amount': '0.001 SMOKE',
                 'memo': 'Test Transfer 1'
             },
             {
                 'from': 'richguy',
                 'to': 'recipient2',
-                'amount': '0.002 STEEM',
+                'amount': '0.002 SMOKE',
                 'memo': 'Test Transfer 2'
             },
             {
                 'from': 'richguy',
                 'to': 'recipient3',
-                'amount': '0.003 STEEM',
+                'amount': '0.003 SMOKE',
                 'memo': 'Test Transfer 3'
             }
 
@@ -162,7 +161,7 @@ This script will also teach us how to create and sign transactions ourselves.
         # we don't want to really send funds, just testing.
         tb = TransactionBuilder(no_broadcast=True)
 
-        # lets serialize our transfers into a format Steem can understand
+        # lets serialize our transfers into a format SMOKE can understand
         operations = [operations.Transfer(**x) for x in transfers]
 
         # tell TransactionBuilder to use our serialized transfers
@@ -177,7 +176,7 @@ This script will also teach us how to create and sign transactions ourselves.
         # sign the transaction
         tb.sign()
 
-        # broadcast the transaction (publish to steem)
+        # broadcast the transaction (publish to SMOKE)
         # since we specified no_broadcast=True earlier
         # this method won't actually do anything
         tx = tb.broadcast()
@@ -186,12 +185,12 @@ Simple Voting Bot
 =================
 
 Here is a simple bot that will reciprocate by upvoting all new posts that mention us.
-Make sure to set ``whoami`` to your Steem username before running.
+Make sure to set ``whoami`` to your SMOKE username before running.
 
     ::
 
-        from steem.blockchain import Blockchain
-        from steem.post import Post
+        from smoke.blockchain import Blockchain
+        from smoke.post import Post
 
 
         def run():

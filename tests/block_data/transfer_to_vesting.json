@@ -5,7 +5,7 @@
     [
       "transfer_to_vesting",
       {
-        "amount": "20.000 STEEM",
+        "amount": "20.000 SMOKE",
         "to": "itsascam",
         "from": "james"
       }

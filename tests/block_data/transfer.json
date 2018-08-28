@@ -5,8 +5,8 @@
     [
       "transfer",
       {
-        "amount": "833.000 STEEM",
-        "to": "steemit",
+        "amount": "833.000 SMOKE",
+        "to": "smoke",
         "memo": "",
         "from": "admin"
       }

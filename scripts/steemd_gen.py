@@ -4,7 +4,7 @@ from pprint import pprint
 
 from funcy.colls import where, pluck
 from funcy.seqs import first, distinct, flatten
-from steem import Steem
+from smoke import Steem
 
 # todo
 # "get_expiring_vesting_delegations": [('author', 'str'), ('from_time', 'object'), ('limit', 'int')],  # ?
@@ -431,11 +431,6 @@ api_methods = [
         'api': 'follow_api',
         'method': 'get_blog',
         'params': [('account', 'str'), ('entry_id', 'int'), ('limit', 'int')],
-    },
-    {
-        'api': 'follow_api',
-        'method': 'get_account_reputations',
-        'params': [('account', 'str'), ('limit', 'int')],
     },
     {
         'api': 'follow_api',

@@ -13,11 +13,11 @@ from setuptools import find_packages, setup, Command
 from setuptools.command.test import test as TestCommand
 
 # Package meta-data.
-NAME = 'steem'
-DESCRIPTION = 'Official python steem library.'
-URL = 'https://github.com/steemit/steem-python'
-EMAIL = 'john@steemit.com'
-AUTHOR = 'Steemit'
+NAME = 'smoke'
+DESCRIPTION = 'Official python smoke library.'
+URL = 'https://github.com/smokenetwork/smoke-python'
+EMAIL = 'baabeetaa@gmail.com'
+AUTHOR = 'Smoke Network'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -131,9 +131,9 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    version='1.0.1',
+    version='0.1.0',
     description=DESCRIPTION,
-    keywords=['steem', 'steemit', 'cryptocurrency', 'blockchain'],
+    keywords=['smoke', 'smoke network', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,
     author=AUTHOR,
     author_email=EMAIL,
@@ -141,9 +141,9 @@ setup(
     packages=find_packages(exclude=('tests','scripts')),
     entry_points={
             'console_scripts': [
-                'piston=steem.cli:legacyentry',
-                'steempy=steem.cli:legacyentry',
-                'steemtail=steem.cli:steemtailentry',
+                'piston=smoke.cli:legacyentry',
+                'smokepy=smoke.cli:legacyentry',
+                'smoketail=smoke.cli:smoketailentry',
             ],
     },
     install_requires=REQUIRED,

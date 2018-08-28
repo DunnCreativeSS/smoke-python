@@ -34,11 +34,10 @@
           "url": "http://fxxk.com",
           "props": {
             "maximum_block_size": 65536,
-            "account_creation_fee": "1.000 STEEM",
-            "sbd_interest_rate": 1000
+            "account_creation_fee": "1.000 SMOKE"
           },
           "block_signing_key": "STM5b3wkzd5cPuW8tYbHpsM6qo26R5eympAQsBaoEfeMDxxUCLvsY",
-          "fee": "0.000 STEEM",
+          "fee": "0.000 SMOKE",
           "owner": "supercomputing06"
         }
       ]

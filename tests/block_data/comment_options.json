@@ -7,7 +7,7 @@
       {
         "author": "testing001",
         "allow_curation_rewards": true,
-        "max_accepted_payout": "1000.000 SBD",
+        "max_accepted_payout": "1000.000 SMOKE",
         "percent_steem_dollars": 5000,
         "allow_votes": true,
         "permlink": "testing6",
@@ -21,4 +21,3 @@
   "ref_block_num": 13118,
   "extensions": []
 }
-

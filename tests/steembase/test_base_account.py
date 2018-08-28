@@ -1,6 +1,6 @@
 import unittest
-from steembase.base58 import Base58
-from steembase.account import BrainKey, Address, PublicKey, \
+from smokebase.base58 import Base58
+from smokebase.account import BrainKey, Address, PublicKey, \
     PrivateKey, PasswordKey
 
 
