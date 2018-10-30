@@ -25,7 +25,7 @@ REQUIRED = [
     'certifi',
     'ecdsa>=0.13',
     'funcy',
-    'futures ; python_version < "3.0.0"',
+    'futures ; python_version > "3.0.0"',
     'future',
     'langdetect',
     'prettytable',
